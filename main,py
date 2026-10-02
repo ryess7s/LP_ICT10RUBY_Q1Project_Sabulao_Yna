@@ -13,7 +13,6 @@ def SKU_generator(e):
 
 
 def create_order(e):
-
     prod1 = document.getElementById("item1")
     prod2 = document.getElementById("item2")
     prod3 = document.getElementById("item3")
@@ -29,18 +28,15 @@ def create_order(e):
     )
 
     tax_rate = 0.12
-
     tax = subtotal * tax_rate
     total = subtotal + tax
 
     receipt = f"""
     <h3>==== Receipt ====</h3>
-
     <p>Subtotal: ₱{subtotal:.2f}</p>
-
     <p>Tax: ₱{tax:.2f}</p>
-
     <p><strong>Total: ₱{total:.2f}</strong></p>
     """
 
-    document.getElementById("show").innerHTML = receipt
+
+    document.getElementById("output").innerHTML = receipt
